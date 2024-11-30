@@ -1,0 +1,15 @@
+.button {
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+
+  &_red {
+    background-color: red;
+  }
+
+  &_green {
+    background-color: green;
+  }
+}
