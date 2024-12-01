@@ -1,7 +1,7 @@
-import styles from './TodoList.module.scss';
-import { TodoListProps } from '../../../types/TodoList';
-import Button from '../../ui/Button/Button';
-import { useState } from 'react';
+import styles from "./TodoList.module.scss";
+import { TodoListProps } from "../../types/TodoList";
+import Button from "../../ui/Button/Button";
+import { useState } from "react";
 
 export const TodoList: React.FC<TodoListProps> = ({
   todo,

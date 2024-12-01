@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState, AppDispatch } from '../../../Redux/store';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState, AppDispatch } from "../../Redux/store";
 
-import styles from './Hero.module.scss';
+import styles from "./Hero.module.scss";
 // prettier-ignore
-import {deleteTodo,editTodo,getTodoList} from '../../../Redux/slice/todoSlice';
-import { TodoList } from '../../components/TodoList/TodoList';
-import TodoForm from '../../components/TodoForm/TodoForm';
+import {deleteTodoList,getTodoList,editTodoList} from '../../Redux/slice/todoSlice';
+import { TodoList } from "../../components/TodoList/TodoList";
+import TodoForm from "../../components/TodoForm/TodoForm";
 
 export const Hero = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -14,15 +14,16 @@ export const Hero = () => {
 
   useEffect(() => {
     dispatch(getTodoList());
+    console.log("useEffect");
   }, [dispatch]);
 
   const handleEdit = (id: number, newTitle: string) => {
     const updatedData = { title: newTitle };
-    dispatch(editTodo({ id, updatedData }));
+    dispatch(editTodoList({ id, updatedData }));
   };
 
   const handleDelete = (id: number) => {
-    dispatch(deleteTodo(id));
+    dispatch(deleteTodoList(id));
   };
 
   return (

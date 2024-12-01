@@ -1,4 +1,4 @@
-import Hero from './app/layouts/Hero/Hero';
+import Hero from "./layouts/Hero/Hero";
 
 function App() {
   return <Hero />;
